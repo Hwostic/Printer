@@ -23,7 +23,10 @@ string PrintJob::getTime() const
     return startTime; 
 }
 
-
+int PrintJob::getCountTask() 
+{
+    return countTasks++;
+}
 
 
 void PrintJob::display() const {

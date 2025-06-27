@@ -7,7 +7,7 @@
 #include <iostream>
 using namespace std;
 
-
+    int History::totalTasks = History::initCounter();
 
     // Метод для добавления задания в очередь
    void Printer::addJob(const PrintJob& print)
@@ -45,5 +45,9 @@ using namespace std;
             temp.front().display();
             temp.pop();
         }
+        History count;
+        cout << "Общее количество задач: " << count.getTotalTasks() <<endl;
+        
+
     }
 

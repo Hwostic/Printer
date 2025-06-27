@@ -14,9 +14,10 @@ private:
     int priority;      // Приоритет задания (большее число = больший приоритет)
     string startTime;       // Время, когда задание было отправлено
     string document;   // Название документа для печати
+    int countTasks=0; //Счетчик заданий;
     
 public:
-
+    
     // Конструктор для инициализации задания на печать
     PrintJob(string user, int priority, string document) : user(user), priority(priority), document(document){
         // Получаем текущее время и форматируем его
@@ -24,13 +25,16 @@ public:
         char buffer[26]; // Буфер для хранения времени
         ctime_s(buffer, sizeof(buffer), &now); // Получаем  время
         startTime = buffer; // Сохраняем время
-      
+  
+       
     }
 
     string getUser() const;
     int getPriority() const;
     string getTime() const;
     string getDocument() const;
+    int getCountTask();
+
     void display() const;
 
     bool operator<(const PrintJob& other) const;
