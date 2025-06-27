@@ -19,12 +19,16 @@ using namespace std;
     // Метод для печати следующего задания
     void Printer::printNext() 
     {
-        if (!printQueue.empty()) {
+        if (!printQueue.empty()) 
+        {
             PrintJob nextJob = printQueue.top(); // Получаем задание с наивысшим приоритетом
-            printQueue.pop();                     // Удаляем его из очереди
+            printQueue.pop();      
+            // Удаляем его из очереди
+          
             // Добавляем запись в статистику
            History history(nextJob.getUser(), nextJob.getDocument());
            statistic.push(history);
+
             // Отображаем информацию о выполненном задании
             cout << "Печать задания: " <<endl;
             nextJob.display();

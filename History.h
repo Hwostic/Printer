@@ -19,14 +19,16 @@ private:
     static int totalTasks;
 
 public:
-    //  онструктор
+
+    History() = default;
+  
     History(string userName, string doc) : userName(userName), documentName(doc)
     {
         totalTasks++;
         countTask = totalTasks;
 
     };
-    // ћетод дл€ отображени€ записи в истории
+   
     
     //инициализируем статистическую переменную
     static int initCounter() {
@@ -37,7 +39,7 @@ public:
     static int getTotalTasks() {
         return totalTasks;
     }
-
+  
     void display() 
     {
       
@@ -47,8 +49,5 @@ public:
     }
 
 
-   
-
-    History() = default;
 };
 

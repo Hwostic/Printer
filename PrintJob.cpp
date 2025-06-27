@@ -4,7 +4,8 @@
 #include <string>
 using namespace std;
 
-// Геттеры для свойств задания
+// Геттеры для получения данных
+
 string PrintJob::getUser() const 
 { 
     return user; 

@@ -23,6 +23,5 @@ public:
     void displayStatistics() const;     // Метод для отображения статистики печати
         
 
-    Printer() = default;
 };
 

@@ -23,11 +23,7 @@ int main()
     printer.printNext();
     printer.printNext();
     printer.printNext();
-    printer.printNext(); 
-    
-    // Попытка напечатать, когда очередь пуста
-    // Отображаем статистику печати
-
+   
    printer.displayStatistics();
     return 0;
 
